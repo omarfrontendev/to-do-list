@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'poppins',sans-serif;
+    background-image: linear-gradient(120deg ,#eac041,#ff8a65c7);
+    min-height: 100vh;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    font-size: 25px;
+    margin: 50px;
+    margin-bottom: 100px;
+}
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    transform: translateX(11%);
+}
+form input,
+form button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 18px;
+}
+form button  {
+    background-color: #FFF;
+    color: #f4511e;
+    cursor: pointer;
+    font-size: 23px;
+    padding: 7px;
+    transition: all .3s ease;
+}
+form button:hover {
+    background-color: #f4511e;
+    color: #FFF;
+}
+
+.todo {
+    display: flex;
+    color: #333;
+    width: 350px;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+}
+.todo:not(:last-child) {
+    margin-bottom: 5px;
+}
+.todo li {
+    width: 100%;
+    list-style: none;
+    padding: 5px;
+    background-color: #FFF;
+}
+.todo .complete-button,
+.todo .trash-button {
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f4511e;
+    color: #FFF;
+    font-size: 20px;
+}
+.todo .complete-button {
+    background-color: #4caf50;
+}
+.todo .complete-button i,
+.todo .trash-button i {
+    pointer-events: none;
+}
+.todo.completed {
+    opacity: .5;
+    text-decoration: line-through;
+}
+.todo.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+    transition: all .5s ease;
+}
+.select {
+    margin: 1rem;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+select {
+    border: none;
+    outline: none;
+    appearance: none;
+    cursor: pointer;
+    width: 130px;
+    color: #f4511e;
+    padding: 10px;
+    font-size: 15px;
+}
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f4511e;
+    right: 0%;
+    cursor: pointer;
+    transition: all .3s ease;
+    pointer-events: none;
+    font-size: 15px;
+    padding: 7px;
+}
+.select:hover::after {
+    background-color: #FFF;
+    color: #f4511e;
+}
